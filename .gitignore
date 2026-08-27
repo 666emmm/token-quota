@@ -1,0 +1,14 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+
+# Backup / temp
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local DSH data (never commit personal ledger / settings)
+storages/
+*.local.yaml

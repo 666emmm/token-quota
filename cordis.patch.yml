@@ -1,0 +1,4 @@
+# dsh-token-quota bundle patch
+- insert:
+    - id: token-quota
+      name: dsh-token-quota
