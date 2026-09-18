@@ -1,5 +1,16 @@
 # dsh-token-quota
 
+> **DSH 版本兼容**：本插件按 DSH 版本分两条线维护，请按你使用的 DSH 版本选择分支。
+>
+> | DSH 版本 | 分支 | 说明 |
+> |---|---|---|
+> | **0.1.5-rc.2**（现行稳定线） | `master` | 默认分支，装它 |
+> | **0.1.6-alpha.2+** | `feat/dsh-0.1.6` | strict codec 迁移到 `create` 工厂形式 |
+>
+> 两分支的 codec 写法互不兼容：`master` 用 `schema`（0.1.6 校验器读 `codec.create`），
+> `feat/dsh-0.1.6` 用 `create: () => <zod schema>`（0.1.5 的 loader 校验器要求 `schema` 是 zod 对象）。
+> 装错分支会让 `typert-loader` 在校验 strict codec 时抛错，进而使 `dsh web` 启动失败。
+
 DeepSeek Harness (DSH) 插件：**按模型统计每日 Token 用量 + 每日配额提醒**。
 
 - 📊 按模型累计每日 Token 用量（输入 / 输出 / 缓存 / 推理），无需联网
