@@ -1,6 +1,6 @@
 {
   "name": "dsh-token-quota",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "DeepSeek Harness 每日模型 Token 额度统计与提醒插件:按模型累计每日用量,可设置配额,到达阈值时对话框变色提醒切换模型。Per-model daily token quota tracker with composer color reminder for DSH Web.",
   "type": "module",
   "main": "lib/index.js",
